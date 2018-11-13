@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2 class="text-center mb-50">Submit Your Favorite Animal</h2>
+      <form [formGroup]="animalForm" novalidate (ngSubmit)="onSubmit()">
+        <fieldset>
+        <div class="form-group">
+          <div class="input-group">
+            <input id="animal-input" formControlName="name" required placeholder="Search for..." type="text" class="form-control"
+                   [(ngModel)]="model"
+                   [ngbTypeahead]="search"/>
+            <span class="input-group-btn">
+           <button class="btn btn-default" type="submit">Submit</button>
+          </span>
+          </div>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
