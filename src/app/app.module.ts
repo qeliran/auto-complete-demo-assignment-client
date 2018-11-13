@@ -10,8 +10,8 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -38,7 +38,7 @@ const routes: Routes = [
     ReactiveFormsModule
   ],
   providers: [
-    AuthenticationService, 
+    AuthenticationService,
     AuthGuardService
   ],
   bootstrap: [AppComponent]
