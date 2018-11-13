@@ -4,12 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot target=production"
   },
   "engines": {
     "node": "8.11.2",
@@ -19,9 +19,9 @@
   "dependencies": {
     "@angular/animations": "^5.2.2",
     "@angular/cli": "^1.6.6",
-    "@angular/compiler-cli": "^5.2.2",
     "@angular/common": "^5.2.2",
     "@angular/compiler": "^5.2.2",
+    "@angular/compiler-cli": "^5.2.2",
     "@angular/core": "^5.2.2",
     "@angular/forms": "^5.2.2",
     "@angular/http": "^5.2.2",
@@ -31,7 +31,9 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "express": "^4.16.4",
     "rxjs": "^5.5.2",
+    "typescript": "~2.6.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -50,7 +52,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
-    "tslint": "~5.7.0",
-    "typescript": "~2.6.2"
+    "tslint": "~5.7.0"
   }
 }
