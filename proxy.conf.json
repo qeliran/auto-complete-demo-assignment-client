@@ -2,6 +2,5 @@
   "/api": {
     "target": "https://iil-makiage-demo-assignmnt.herokuapp.com/",
     "secure": false
-  },
-  "changeOrigin": true
+  }
 }
