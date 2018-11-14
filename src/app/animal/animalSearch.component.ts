@@ -26,7 +26,7 @@ export class AnimalSearchComponent {
       debounceTime(200),
       distinctUntilChanged(),
       map(term => term.length > 1 && this.validateTerm(term)
-        ? this.animals.filter(a => a.startsWith(term))
+        ? this.animals.filter(a => a.startsWith(Array.prototype.join.call(term, '')))
         : [])
     )
 
