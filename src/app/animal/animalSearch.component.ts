@@ -25,9 +25,12 @@ export class AnimalSearchComponent {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term => term.length < 2 ? []
-        : this.animals
-    ))
+      map(term => term.length > 1 && this.validateTerm(term) ? this.animals : [])
+    )
+
+  validateTerm(term) : Boolean {
+   return this.animals.some(a => a.startsWith(term));
+  }
 
   getAnimals() {
     const url = `${environment.baseApiUrl}/api/animals`;
