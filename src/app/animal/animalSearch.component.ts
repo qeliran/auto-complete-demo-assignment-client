@@ -25,7 +25,9 @@ export class AnimalSearchComponent {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term => term.length > 1 && this.validateTerm(term) ? this.animals : [])
+      map(term => term.length > 1 && this.validateTerm(term)
+        ? this.animals.filter(a => a.startsWith(term))
+        : [])
     )
 
   validateTerm(term) : Boolean {
